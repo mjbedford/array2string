@@ -46,6 +46,7 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error) {
 
 	// do eval
 	ivDelimiter := getInputParameter(context, delimiter)
+	// source := getInputParameter(context, source)
 	ivPrefix := getInputParameter(context, prefix)
 	ivSuffix := getInputParameter(context, suffix)
 	ivPart1 := getInputParameter(context, part1)
@@ -72,6 +73,11 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error) {
 
 	//	log.Debug("Adding parts to result")
 
+	// for _, i := range source.ids {
+	// 	ivResult = addPart(ivResult, i.id, ivDelimiter)
+
+	// }
+
 	ivResult = addPart(ivResult, ivPart1, ivDelimiter)
 	ivResult = addPart(ivResult, ivPart2, ivDelimiter)
 	ivResult = addPart(ivResult, ivPart3, ivDelimiter)
@@ -81,7 +87,7 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error) {
 	ivResult = addPart(ivResult, ivPart7, ivDelimiter)
 	ivResult = addPart(ivResult, ivPart8, ivDelimiter)
 
-	//	log.Debugf("Result is now: [%s]", ivResult)
+	log.Debugf("Result is now: [%s]", ivResult)
 
 	//	log.Debug("Processing prefix")
 	if ivPrefix != "" { // we have a prefix, result starts with this
