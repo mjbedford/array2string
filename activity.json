@@ -6,7 +6,7 @@
   "title": "Array2String",
   "description": "Combines array elements into a single string",
   "author": "Martyn Bedford <mbedford@tibco.com>",
-  "homepage": "https://github.com/mbedford",
+  "homepage": "https://github.com/mjbedford/array2string",
   "input":[
     {
       "name": "delimiter",
